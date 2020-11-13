@@ -40,12 +40,12 @@ function Loading() {
   useEffect(() => {      
     console.log(initialHeight);
     let tl = gsap.timeline();
+
     tl.fromTo(logo, {opacity: 0}, {opacity:1,duration: 1, ease:'expo'});
     tl.to(logo, {duration: 1, ease:"expo", color: '#fff'});
-    tl.to(logo, {duration: 2, ease:"expo", transform: 'matrix(1,0,0,1,0,' + (-initialHeight) +')'});
-    tl.fromTo(overlay, {opacity:1} ,{duration: 0.1, width: '0px',opacity: 0});
-    tl.to(overlay, {display: 'none'})
-    
+    tl.to(logo, {duration: 1, ease:"expo", transform: 'matrix(1,0,0,1,-25,' + (-initialHeight) +')'});
+    tl.to(overlay, {duration: 1,x: '100vw', ease: "expo"});
+    tl.to(overlay, {display: 'none'});
   },[initialHeight]);
 
   

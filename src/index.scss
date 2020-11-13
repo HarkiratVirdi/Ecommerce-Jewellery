@@ -6,6 +6,8 @@ $tertiary-color: #361B00;
 
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;700&display=swap');
+
 *{
   margin: 0;
   padding:0;
@@ -15,8 +17,7 @@ $tertiary-color: #361B00;
 
 body {
   background-color: $primary-color;
-  overflow: hidden;
-  
+ overflow-x: hidden;
 }
 
 html{
@@ -24,9 +25,21 @@ html{
   font-size: 62.5%;
 }
 
+
+.image_overlay{
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  z-index:-1;
+  background-color: $primary-color;
+  width: 50%;
+}
+
 .overlay{
   width: 100vw;
   height: 100vh;  
+  background-color: $black-color;
 }
 
 .container{
@@ -42,14 +55,13 @@ html{
   color: transparent;
   letter-spacing: 1rem;
   font-size: 3.5rem;
-  margin-left:2.2rem;
   }
 }
 
 header{
 nav{
   position: fixed;
-  
+
   .list{
   top: 100px;
   left: 0;
@@ -101,7 +113,7 @@ nav{
       position: fixed;
       right: 15rem;
       top: 5rem;
-
+      opacity: 0;
       list-style: none;
       white-space: nowrap;
       display: block;
@@ -129,7 +141,9 @@ nav{
 
 .heading{
   width: 700px;
-  height: 700px;
+  font-family: 'vollkorn';
+  line-height: 6rem;
+  height: 900px;
   .grid{
   display: grid;
   grid-template-columns: repeat(14,50px);
@@ -156,5 +170,56 @@ nav{
       font-weight: bolder;
       color: $white-color;
       }
+
+      .cta-shop{
+        display: grid;
+        grid-column: 7;
+        grid-row: 9;
+        justify-self: center;
+        margin-top: 3.5rem;
+        pointer-events: all;
+        
+        .button_broken{
+        
+          width: 8rem;
+          height: 4rem;
+          background-color: transparent;
+          border: 1px solid $tertiary-color;
+          position: relative;
+          top: 0;
+          right: -40px;
+        }
+        
+        button{
+          cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.7rem;
+    padding: 1rem 3rem;
+    border: none;
+    position: absolute;
+    z-index: 20;
+    background-color: transparent;
+    font-size: 2rem;
+  }
 }
 }
+
+
+
+}
+
+
+.arrow-down{
+  display: grid;
+  grid-row: -1;
+  grid-column: 8;
+img{
+  display: grid;
+  grid-row: 15;
+  width: 90%;
+  height: auto;
+  transform: rotate(90deg);
+  filter: invert(100%) sepia(3%) saturate(1%) hue-rotate(0deg) brightness(100%) contrast(100%);
+}  
+}
+
