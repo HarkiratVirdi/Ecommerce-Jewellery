@@ -1,0 +1,160 @@
+$white-color: #fff;
+$black-color: #161618;
+$primary-color: #C7915F;
+$secondary-color: #D29F70;
+$tertiary-color: #361B00;
+
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+*{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+
+body {
+  background-color: $primary-color;
+  overflow: hidden;
+  
+}
+
+html{
+  font-family: 'Karla', sans-serif;
+  font-size: 62.5%;
+}
+
+.overlay{
+  width: 100vw;
+  height: 100vh;  
+}
+
+.container{
+   position: absolute;
+  top: 50%;
+  left: 50%;
+   transform: translate(-50%, -50%);
+  
+  .logo{
+     -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: white;
+  transform: matrix(3,0,0,3,0,0);
+  color: transparent;
+  letter-spacing: 1rem;
+  font-size: 3.5rem;
+  margin-left:2.2rem;
+  }
+}
+
+header{
+nav{
+  position: fixed;
+  
+  .list{
+  top: 100px;
+  left: 0;
+ position: absolute;
+  width: auto;
+   display: block;
+   font-size: 0;
+    line-height: 0;
+   height: auto;
+   list-style: none;
+   white-space: nowrap;
+   transform-origin: right top;
+   transform: translateX(-85%) rotate(-90deg);
+    
+    .link{
+      margin-right: 3rem;
+      display: inline-block;
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      font-weight: 700;
+    } 
+    
+    .link a{
+      color: $white-color;
+      text-decoration: none;
+          letter-spacing: 0.5rem;
+
+      
+    }
+
+
+
+
+  }
+}
+
+.hero_image{
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  object-fit: cover;
+  z-index: -3;
+  
+}
+
+
+    .list-right{
+      position: fixed;
+      right: 15rem;
+      top: 5rem;
+
+      list-style: none;
+      white-space: nowrap;
+      display: block;
+      font-size: 0;
+      line-height: 0;
+      font-size: 1.4rem; 
+    
+      .link{
+        display: inline-block;
+        margin-right: 3rem;
+       
+        a{
+          color: $white-color;
+          letter-spacing: 0.5rem;
+          text-transform: uppercase;
+          text-decoration: none;
+          font-weight: 700;
+        }
+      }
+
+    
+    }
+
+}
+
+.heading{
+  width: 700px;
+  height: 700px;
+  .grid{
+  display: grid;
+  grid-template-columns: repeat(14,50px);
+  grid-template-rows: repeat(14,50px);
+  justify-items: start;
+  align-items: start;
+
+  .behind-overlay{
+    background-color: $secondary-color;
+    width: 20rem;
+    align-items: center;
+    justify-items: center;
+    height: 20rem;
+    display: grid;
+    grid-row: 4/5;
+    grid-column: 6/8;
+  }
+
+    h1{
+      display: grid;
+      font-size: 5rem;
+      grid-column: 7/14;
+      grid-row: 6;
+      font-weight: bolder;
+      color: $white-color;
+      }
+}
+}
