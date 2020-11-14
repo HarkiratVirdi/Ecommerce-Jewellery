@@ -32,7 +32,7 @@ import gsap from "gsap";
 }
 
 function Loading() {
-  let logo = useRef(null);
+  let big_logo = useRef(null);
   let overlay = useRef(null);
   let size = useWindowSize();
   let initialHeight = size.height/2 - 50;
@@ -40,20 +40,18 @@ function Loading() {
   useEffect(() => {      
     console.log(initialHeight);
     let tl = gsap.timeline();
-
-    tl.fromTo(logo, {opacity: 0}, {opacity:1,duration: 1, ease:'expo'});
-    tl.to(logo, {duration: 1, ease:"expo", color: '#fff'});
-    tl.to(logo, {duration: 1, ease:"expo", transform: 'matrix(1,0,0,1,-25,' + (-initialHeight) +')'});
-    tl.to(overlay, {duration: 1,x: '100vw', ease: "expo"});
-    tl.to(overlay, {display: 'none'});
+    tl.to(".big_logo", {duration: 2, ease:"expo", color: '#fff'});
+    tl.to(".overlay", {duration: 2,y: '-100vh', ease: "expo"});
+    tl.to(".overlay", {display: 'none'});
   },[initialHeight]);
 
   
   return <div className="loading">
-  <div ref={el=>{overlay = el}} className="overlay"></div>
+  <div ref={el=>{overlay = el}} className="overlay">
     <div className="container">
-      <div ref={el => {logo = el}} className="logo">TIRA</div>
+      <h1 className="big_logo">TIRA</h1>
     </div>
+  </div>
   </div>;
 }
 

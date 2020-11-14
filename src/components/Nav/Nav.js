@@ -9,24 +9,27 @@ function Nav() {
    let heading = useRef(null);
     let image_overlay = useRef(null);
     let mainImage = useRef(null);
+    let cta_shop = useRef(null);
     let arrowDown = useRef(null);
     
 
-
+    
     useEffect(() => {
-        const transitionInitial = {opacity: 0};
-        const transitionEnd =  {duration: 1, opacity: 1};
-        const elements = [arrowDown,nav_left, nav_right, heading];
-
-        let tl = gsap.timeline();
-        tl.to(image_overlay, {ease:'expo', x: '50vw', duration: 2, delay: 4.8});
-        tl.to(mainImage, {scaleX: 1.1, scaleY: 1.1, delay: -2, duration: 1, ease:'expo'});
-        tl.fromTo(elements, {...transitionInitial}, {...transitionEnd, delay: -0.999});
+      const transitionInitial = {opacity: 0};
+                 const transitionEnd =  {duration: 1, opacity: 1};
+                 const elements = ["arrow-down",".list", ".list-right", ".heading", ".cta_shop", ".logo"];
+         
+                 let tl = gsap.timeline();
+                 tl.to(".image_overlay", {ease:'expo', x: '50vw', duration: 2, delay: 4});
+                 tl.to(".hero_image", {scaleX: 1.1, scaleY: 1.1, delay: -2, duration: 1, ease:'expo'});
+                 tl.fromTo(elements, {...transitionInitial}, {...transitionEnd, delay: -0.99});
+           
     });
 
 
 
-  return <header>
+  return <div>
+  <header>
    <nav>
       <ul ref={el => nav_left = el} className="list">
           <li className="link"><a href="#">Shop</a></li>
@@ -34,6 +37,8 @@ function Nav() {
           <li className="link"><a href="#">Contact</a></li>
       </ul>
   </nav>
+
+    <div className="logo">TIRA</div>
 
     <ul ref={el => {nav_right = el}}  className="list-right">
         <li className="link"><a href="#">FR</a></li>
@@ -50,7 +55,7 @@ function Nav() {
     <div className="behind-overlay">
     </div>
         <h1>Jewellery For The Modern Woman</h1>
-          <div className="cta-shop">
+          <div ref={el => {cta_shop = el}} className="cta-shop">
         <div className="button_broken"></div>
         <button>Shop</button>
           </div>
@@ -59,13 +64,8 @@ function Nav() {
         </div>
     </div>
     </div>
-
-
-    
-  
-
-
-  </header>;
+  </header>
+</div>;
 }
 
 export default Nav;
