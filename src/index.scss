@@ -101,6 +101,7 @@ nav{
   width: auto;
    display: block;
    font-size: 0;
+   z-index: 5;
     line-height: 0;
    height: auto;
    list-style: none;
@@ -146,6 +147,7 @@ nav{
       right: 15rem;
       top: 5rem;
       opacity: 0;
+      z-index: 5;
       list-style: none;
       white-space: nowrap;
       display: block;
@@ -257,7 +259,6 @@ img{
 .page_image{
    position: relative;
    height: 50vw;
-    z-index: -1;
     margin-top: 40rem;
     overflow: hidden;
 
@@ -267,8 +268,8 @@ img{
     background-position: center;
     background-size: cover;
     width: 100%;
+    z-index: -3;
     height: 100%;
-   
     position: absolute;
   }
 

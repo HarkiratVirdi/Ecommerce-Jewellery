@@ -40,7 +40,7 @@ function Loading() {
   useEffect(() => {      
     console.log(initialHeight);
     let tl = gsap.timeline();
-    tl.to(".big_logo", {duration: 2, ease:"expo", color: '#fff'});
+    tl.to(".big_logo", {duration: 2,ease:"circ", color: '#fff'});
     tl.to(".overlay", {duration: 2,y: '-100vh', ease: "expo"});
     tl.to(".overlay", {display: 'none'});
     tl.to(".loading", {display: 'none'});
