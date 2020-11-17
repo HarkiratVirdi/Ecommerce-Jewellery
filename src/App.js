@@ -1,15 +1,16 @@
 import React, { useState } from "react";
-import Nav from "./components/Nav/Nav";
 import Loading from "./Loading/Loading";
-import PageImage from "./components/PageImage";
+import HomePage from "./components/HomePage/HomePage";
+// import { Link, BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
+    // <Router>
     <div className="App">
       <Loading />
-      <Nav />
-      <PageImage />
+      <HomePage />
     </div>
+    // </Router>
   );
 }
 
