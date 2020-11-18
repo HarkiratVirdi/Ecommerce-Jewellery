@@ -2,10 +2,10 @@ import React from "react";
 import Nav from "../Nav/Nav";
 import PageImage from "../PageImage";
 
-function HomePage() {
+function HomePage({ loading }) {
   return (
     <div>
-      <Nav />
+      <Nav loading={loading} />
       <PageImage />
     </div>
   );

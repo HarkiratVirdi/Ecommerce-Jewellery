@@ -314,15 +314,39 @@ img{
   }
 }
 
-.cart_prop{
+
+      .cart_cross{
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+      height: 2rem;
+      width: 2rem;
+        color: $white-color;
+        font-size: 2rem;
+        z-index: 9999;
+        display: none;
+      }
+
+      .cross_display{
+        display: inline-block;
+        cursor: pointer;
+      }
+
+.cart{
+  display: none;
+}
+
+.cart_display{
    z-index: 777;
     position: fixed;
     height: 100vh;
     width: 100vw;
     top: 0;
     left: 0;
+    display: block;
     
     .overlay_prop{
+      position: relative;
       height: 100%;
       width: 100%;
       background: $black-color;
@@ -331,9 +355,9 @@ img{
         color: $white-color;
         font-weight: 700;
         font-size: 4rem;
-        
         margin-bottom: 3rem;
       }
+
 
       .cart_container{
       
