@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import gsap from "gsap";
 import Cart from "../Cart/Cart";
 
@@ -18,14 +18,20 @@ const Nav = ({ loading }) => {
     ];
 
     let tl = gsap.timeline();
-    tl.to(".image_overlay", { ease: "expo", x: "50vw", duration: 2, delay: 4 });
-    tl.to(".hero_image", {
-      scaleX: 1.1,
-      scaleY: 1.1,
-      delay: -2,
-      duration: 1,
-      ease: "expo",
-    });
+    tl.fromTo(
+      ".hero_image",
+      {
+        clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)",
+      },
+      {
+        clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+        duration: 1.5,
+        delay: 4,
+        scaleX: 1.1,
+        scaleY: 1.1,
+        ease: "expo",
+      }
+    );
     tl.fromTo(
       elements,
       { ...transitionInitial },
@@ -76,14 +82,20 @@ const Nav = ({ loading }) => {
           </ul>
         </nav>
 
-        <div className="logo">TIRA</div>
+        <NavLink to="/" className="logo">
+          TIRA
+        </NavLink>
 
         <ul className="list-right">
           <li className="link">
-            <Link to="/fr">FR</Link>
+            <Link className="french" to="/fr">
+              FR
+            </Link>
           </li>
           <li className="link">
-            <Link to="/login">Login</Link>
+            <Link className="login" to="/login">
+              Login
+            </Link>
           </li>
           <li className="link">
             <Link

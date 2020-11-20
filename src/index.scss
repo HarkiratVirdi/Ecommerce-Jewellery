@@ -3,6 +3,7 @@ $black-color: #161618;
 $primary-color: #C7915F;
 $secondary-color: #D29F70;
 $tertiary-color: #361B00;
+$filter-color: #AB7E55;
 
 @mixin text-prop{
   color: $white-color;
@@ -24,12 +25,15 @@ $tertiary-color: #361B00;
 body {
   background-color: $primary-color;
   overflow-x: hidden;
+  height: 6000px;
 }
 
 html{
   font-family: 'Karla', sans-serif;
   font-size: 62.5%;
 }
+
+
 
 .container{
   margin: auto;
@@ -86,6 +90,7 @@ header{
   color: $white-color;
   position: absolute;
   top: 50px;
+  text-decoration: none;
   left: 48.3%;
   transform: translate(-50%, -50%);
   letter-spacing: 1rem;
@@ -178,20 +183,21 @@ nav{
   height: 100%;
   position: absolute;
   right: 0;
+clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   object-fit: cover;
   z-index: -3;
   
 }
 
-.image_overlay{
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 100vh;
-  z-index:-1;
-  background-color: $primary-color;
-  width: 50%;
-}
+// .image_overlay{
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+//   height: 100vh;
+//   z-index:-1;
+//   background-color: $primary-color;
+//   width: 50%;
+// }
 
 
 
@@ -462,4 +468,70 @@ img{
 
  
 
+}
+
+
+.Shop{
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  .Shop_Section_1{
+    position: relative;
+    top:0;
+    height: 100vh;
+    width: 100%;  
+    
+    img{
+      height: 100vh;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .Shop_Section_1_Text{
+      position: absolute;
+      top:50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 12rem;
+      font-weight: bolder;
+      color: $white-color;
+    }
+
+
+    .arrow{
+      width: 3%;
+      height: 3%;
+      position: absolute;
+      bottom: 5rem;
+   right: 50%;
+        transform: rotate(90deg);
+  filter: invert(100%) sepia(3%) saturate(1%) hue-rotate(0deg) brightness(100%) contrast(100%);
+    }
+  }
+
+.Shop_Section_2{
+  margin-top: 8rem;
+
+  .Shop_Filter{
+    background-color: $filter-color;
+    color: $white-color;    
+    height: 8rem;
+    display: flex;
+    justify-content: space-around;  
+  }
+
+
+}
+
+
+
+
+}
+
+.Scroll_Container{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 }

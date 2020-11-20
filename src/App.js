@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Nav from "./components/Nav/Nav";
+import Shop from "./components/Shop/Shop";
 import Loading from "./components/Loading/Loading.js";
 import { Link, BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import HomePage from "./components/HomePage/HomePage";
@@ -32,6 +33,7 @@ function App() {
                     component={HomePage}
                     loading={loading}
                   />
+                  <Route exact path="/shop" component={Shop} />
                 </main>
               </div>
             </Switch>
