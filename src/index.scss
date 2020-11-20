@@ -38,15 +38,6 @@ html{
   overflow: hidden;
 }
 
-.image_overlay{
-  position: absolute;
-  top: 0;
-right: 0;
-  height: 100vh;
-  z-index:-1;
-  background-color: $primary-color;
-  width: 50%;
-}
 
 .loading{
   position: fixed;
@@ -90,8 +81,6 @@ header{
   position: relative;
   top: 0;
   z-index: 1;
-  height: 100vh;
-
   
   .logo{
   color: $white-color;
@@ -144,15 +133,7 @@ nav{
   }
 }
 
-.hero_image{
-  width: 50%;
-  height: 100%;
-  position: absolute;
-  right: 0;
-  object-fit: cover;
-  z-index: -3;
-  
-}
+
 
 
     .list-right{
@@ -185,6 +166,34 @@ nav{
     }
 
 }
+
+
+.HomePage_Section1{
+  position: relative;
+  height: 100vh;
+  width: 100%;
+
+  .hero_image{
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  object-fit: cover;
+  z-index: -3;
+  
+}
+
+.image_overlay{
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  z-index:-1;
+  background-color: $primary-color;
+  width: 50%;
+}
+
+
 
 .heading{
   width: 700px;
@@ -269,6 +278,9 @@ img{
 }  
 }
 
+}
+
+
 .page_image{
    position: relative;
    height: 50vw;
@@ -318,11 +330,11 @@ img{
       .cart_cross{
         position: absolute;
         top: 2rem;
-        right: 2rem;
-      height: 2rem;
-      width: 2rem;
+        right: 8rem;
+        height: 2rem;
+        width: 2rem;
         color: $white-color;
-        font-size: 2rem;
+        font-size: 4rem;
         z-index: 9999;
         display: none;
       }
@@ -332,24 +344,24 @@ img{
         cursor: pointer;
       }
 
-.cart{
-  display: none;
-}
+// .cart{
+//   display: none;
+// }
 
-.cart_display{
+.cart{
    z-index: 777;
     position: fixed;
     height: 100vh;
     width: 100vw;
     top: 0;
     left: 0;
-    display: block;
+    display: none;
     
     .overlay_prop{
       position: relative;
       height: 100%;
       width: 100%;
-      background: $black-color;
+      background: $primary-color;
       
       .cart_heading{
         color: $white-color;
@@ -368,11 +380,11 @@ img{
       .cart_footer{
         height: 7rem;
         width: 100%;
-        padding: 0 2rem;
-        background-color: $white-color;
+        padding: 0 0 0 2rem;
+        background-color: $primary-color;
         position: fixed;
         bottom: 0;
-        
+        color: $white-color;
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -384,17 +396,19 @@ img{
         }
 
         .cart_total{
-          flex: 1;
+          flex: 4;
+          
         }
 
         .cart_options{
+          background-color: $white-color;
           display: flex;
-          flex: 5;
-          justify-content: flex-end;
-          
-          .cart_checkout{
-            margin-right: 3rem;
-          }
+          flex: 1;
+          padding: 2rem 3rem;
+          color: $black-color;
+          justify-content: center;
+          align-items: center;
+
         }
 
 

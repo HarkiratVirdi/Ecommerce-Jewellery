@@ -1,13 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { Link, BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import mainGirl from "../../image/joeyy-lee-s8SJ8pmxPDA-unsplash.jpg";
+import { Link } from "react-router-dom";
 import gsap from "gsap";
 import Cart from "../Cart/Cart";
-import arrow from "../../image/arrow-pointing-to-right.svg";
 
 const Nav = ({ loading }) => {
   const [CartDisplay, setCartDisplay] = useState(false);
-
   useEffect(() => {
     const transitionInitial = { opacity: 0 };
     const transitionEnd = { duration: 1, opacity: 1 };
@@ -36,67 +33,75 @@ const Nav = ({ loading }) => {
     );
   }, [loading]);
 
-  const ToggleCart = () => {
-    setCartDisplay((prevState) => ({ CartDisplay: !prevState.cartDisplay }));
+  useEffect(() => {
+    runAnimation();
+  }, [CartDisplay]);
+
+  const runAnimation = () => {
+    if (CartDisplay) {
+      gsap.fromTo(
+        ".cart",
+        { y: -1000 },
+        {
+          duration: 1,
+          y: 0,
+
+          ease: "expo",
+          display: "block",
+        }
+      );
+    } else {
+      gsap.fromTo(
+        ".cart",
+        { y: 0 },
+        { y: -1000, ease: "power1", display: "none", duration: 1 }
+      );
+    }
   };
 
   return (
-    <Router>
-      <div>
-        <header>
-          <nav>
-            <ul className="list">
-              <li className="link">
-                <a href="#">Shop</a>
-              </li>
-              <li className="link">
-                <a href="#">About</a>
-              </li>
-              <li className="link">
-                <a href="#">Contact</a>
-              </li>
-            </ul>
-          </nav>
-
-          <div className="logo">TIRA</div>
-
-          <ul className="list-right">
+    <div>
+      <header>
+        <nav>
+          <ul className="list">
             <li className="link">
-              <a href="#">FR</a>
+              <Link to="/shop">Shop</Link>
             </li>
             <li className="link">
-              <a href="#">Login</a>
+              <Link to="/about">About</Link>
             </li>
             <li className="link">
-              <h2 onClick={ToggleCart}>Cart</h2>
+              <Link to="/contact">Contact</Link>
             </li>
           </ul>
+        </nav>
 
-          <div className="image_overlay"></div>
-          <img className="hero_image" src={mainGirl} alt="" />
+        <div className="logo">TIRA</div>
 
-          <div className="heading">
-            <div className="grid">
-              <div className="behind-overlay"></div>
-              <h1>Jewellery For The Modern Woman</h1>
-              <div className="cta-shop">
-                <div className="button_broken"></div>
-                <button>Shop</button>
-              </div>
-              <div className="arrow-down">
-                <img src={arrow} alt="" />
-              </div>
-            </div>
-          </div>
-        </header>
-        {/* <Switch>
-          <Route exact path="/Cart">
-            <Cart />
-          </Route>
+        <ul className="list-right">
+          <li className="link">
+            <Link to="/fr">FR</Link>
+          </li>
+          <li className="link">
+            <Link to="/login">Login</Link>
+          </li>
+          <li className="link">
+            <Link
+              onClick={() => {
+                setCartDisplay((prev) => !prev);
+              }}
+            >
+              Cart
+            </Link>
+          </li>
+        </ul>
+      </header>
+      {/* <=Switch>
+          {/* < exact path="/shop">
+            <Shop /></Switch>
         </Switch> */}
-        <Cart cartDisplay={CartDisplay} toggleCart={ToggleCart} />
-      </div>
-    </Router>
+      <Cart CartDisplay={CartDisplay} setCartDisplay={setCartDisplay} />
+    </div>
   );
 };
 

@@ -1,12 +1,13 @@
 import React from "react";
-import Nav from "../Nav/Nav";
-import PageImage from "../PageImage";
+import HomePage_Section3 from "./HomePage_Section3";
+import HomePage_Section1 from "./HomePage_Section1";
 
-function HomePage({ loading }) {
+function HomePage(props) {
+  console.log(props);
   return (
     <div>
-      <Nav loading={loading} />
-      <PageImage />
+      <HomePage_Section1 />
+      <HomePage_Section3 />
     </div>
   );
 }

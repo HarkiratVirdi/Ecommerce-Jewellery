@@ -1,5 +1,5 @@
 import React from "react";
-import SilverEarrings from '../../image/pexels-say-straight-2735970.jpg';
+import SilverEarrings from '../../image/Unique Images/guardian-angel-earrings.jpg';
 
 function CartItems() {
   return <div className="CartItems item_container">
