@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { NavLink, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import gsap from "gsap";
 import Cart from "../Cart/Cart";
 
@@ -82,9 +82,9 @@ const Nav = ({ loading }) => {
           </ul>
         </nav>
 
-        <NavLink to="/" className="logo">
+        <Link to="/" className="logo">
           TIRA
-        </NavLink>
+        </Link>
 
         <ul className="list-right">
           <li className="link">

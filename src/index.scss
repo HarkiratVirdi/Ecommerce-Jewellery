@@ -22,15 +22,17 @@ $filter-color: #AB7E55;
 }
 
 
+
 body {
   background-color: $primary-color;
   overflow-x: hidden;
-  height: 6000px;
+  
 }
 
 html{
   font-family: 'Karla', sans-serif;
   font-size: 62.5%;
+  
 }
 
 
@@ -88,25 +90,26 @@ header{
   
   .logo{
   color: $white-color;
-  position: absolute;
+  position: fixed;
   top: 50px;
   text-decoration: none;
   left: 48.3%;
   transform: translate(-50%, -50%);
   letter-spacing: 1rem;
-  font-size: 3.5rem;
+  font-size: 3rem;
   }
 
 nav{
   position: fixed;
-  .list{
   top: 100px;
+ 
+  .list{
   left: 0;
   opacity: 0;
  position: absolute;
   width: auto;
    display: block;
-   font-size: 0;
+
    z-index: 5;
     line-height: 0;
    height: auto;
@@ -118,7 +121,8 @@ nav{
     .link{
       margin-right: 3rem;
       display: inline-block;
-      font-size: 1.4rem;
+      font-size: 1rem;  
+      font-size: 1.2rem; 
       color: $white-color;
       text-transform: uppercase;
       font-weight: 700;
@@ -127,8 +131,9 @@ nav{
     .link a{
       color: $white-color;
       text-decoration: none;
-          letter-spacing: 0.5rem;
-
+      letter-spacing: 0.5rem;
+    font-weight: lighter;
+      
       
     }
 
@@ -150,20 +155,20 @@ nav{
       list-style: none;
       white-space: nowrap;
       display: block;
-      font-size: 0;
+      font-size: 1.2rem; 
       line-height: 0;
-      font-size: 1.4rem; 
+    
     
       .link{
         display: inline-block;
         margin-right: 3rem;
-       
+     
         a{
           color: $white-color;
           letter-spacing: 0.5rem;
           text-transform: uppercase;
           text-decoration: none;
-          font-weight: 700;
+         font-weight: lighter;
         }
       }
 
@@ -282,6 +287,70 @@ img{
   transform: rotate(90deg);
   filter: invert(100%) sepia(3%) saturate(1%) hue-rotate(0deg) brightness(100%) contrast(100%);
 }  
+}
+
+}
+
+
+.HomePage_Section2{
+  height: 100vh;
+  margin-top:20rem;
+  position: relative;
+  top: 0;
+
+  .row{
+    display: flex;
+    .container{
+      display: flex;
+      justify-content: space-around;
+    }
+
+.images{
+  height: 40rem;
+  width: 25rem;
+}
+
+
+
+  img{
+    
+    object-fit: cover;
+  }
+
+  .img-1{
+    position: absolute;
+    top:0rem;
+    height: 50%;
+    width: 18%;
+    left: 50rem;
+    z-index: 3;
+  }
+
+  .img-2{
+    position: absolute;
+    top: 30rem;
+    left: 30rem;
+    height: 50%;
+    width: 18%;
+    z-index: 2;
+  }
+
+  .text{
+    color: $white-color;
+    font-size: 1.4rem;
+    width: 25%;
+    line-height: 2.2rem;
+    align-self: flex-end;
+  }
+
+  .text::before{
+    content: "";
+    height: 1px;
+    width: 100%;
+    display: block;
+    margin-bottom: 2rem;
+    background: $white-color;
+  }
 }
 
 }
@@ -519,17 +588,11 @@ img{
     height: 8rem;
     display: flex;
     justify-content: space-around;  
+    }
   }
-
-
 }
 
-
-
-
-}
-
-.Scroll_Container{
+.scroll_container{
   position: fixed;
   top: 0;
   left: 0;

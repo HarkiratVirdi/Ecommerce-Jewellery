@@ -1,20 +1,23 @@
 import React, { useRef, useEffect } from "react";
 import gsap from "gsap";
-import {ScrollTrigger} from "gsap/ScrollTrigger";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 function PageImage() {
-
-    useEffect(() => {
-        // gsap.to(".first_letters .letter", {y:100,stagger:{each: 0.1, from: "left", delay: 6}})
-        gsap.to(".image_container",{ x: -300,  scrollTrigger:{trigger: ".image_container",duration: 2}})
+  useEffect(() => {
+    // gsap.to(".first_letters .letter", {y:100,stagger:{each: 0.1, from: "left", delay: 6}})
+    gsap.to(".image_container", {
+      x: -300,
+      scrollTrigger: { trigger: ".image_container", duration: 2 },
     });
+  });
 
-  return (<main className="page_image">
-        <div className="image"></div>
-        <div className="image_container">
+  return (
+    <main className="page_image">
+      <div className="image"></div>
+      <div className="image_container">
         <div className="image_content">
-            <div className="first_letters">
+          <div className="first_letters">
             <h1 className="letter">J</h1>
             <h1 className="letter">e</h1>
             <h1 className="letter">w</h1>
@@ -28,9 +31,9 @@ function PageImage() {
             <h1 className="letter">a</h1>
             <h1 className="letter">t </h1>
             <h1 className="letter">&nbsp;</h1>
-           </div>
+          </div>
 
-           <div className="second_letters">
+          <div className="second_letters">
             <h1 className="letter">E</h1>
             <h1 className="letter">x</h1>
             <h1 className="letter">c</h1>
@@ -42,11 +45,10 @@ function PageImage() {
             <h1 className="letter">Y</h1>
             <h1 className="letter">o</h1>
             <h1 className="letter">u</h1>
+          </div>
         </div>
-        </div>
-        </div>
+      </div>
     </main>
- 
   );
 }
 
