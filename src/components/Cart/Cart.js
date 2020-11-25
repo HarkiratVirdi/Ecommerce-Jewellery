@@ -9,7 +9,7 @@ const Cart = (props) => {
         <div className="cart_overlay overlay_prop">
         <div className="container">
             <h1 className="cart_heading">Cart</h1>
-<div onClick={() => props.setCartDisplay(prev => !prev)}
+            <div onClick={() => props.setCartDisplay(prev => !prev)}
                 className={`cart_cross ${props.CartDisplay ? "cross_display" : ""} `}
               >
                 x

@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import gsap from "gsap";
 import Cart from "../Cart/Cart";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 const Nav = ({ loading }) => {
   const [CartDisplay, setCartDisplay] = useState(false);
@@ -27,9 +29,9 @@ const Nav = ({ loading }) => {
         clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
         duration: 1.5,
         delay: 4,
-        scaleX: 1.1,
-        scaleY: 1.1,
-        ease: "expo",
+        scaleX: 1,
+        scaleY: 1,
+        ease: "power1",
       }
     );
     tl.fromTo(
@@ -51,7 +53,6 @@ const Nav = ({ loading }) => {
         {
           duration: 1,
           y: 0,
-
           ease: "expo",
           display: "block",
         }

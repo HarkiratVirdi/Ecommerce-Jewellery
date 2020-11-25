@@ -19,7 +19,7 @@ function HomePage_Section1() {
       <div className="heading">
         <div className="grid">
           <div className="behind-overlay"></div>
-          <h1>Jewellery For The Modern Woman</h1>
+          <h1>Handmade <span className="span_golden">Jewellery</span> For The <span className="span_golden">Modern</span> Woman</h1>
           <div className="cta-shop">
             <div className="button_broken"></div>
             <button>Shop</button>

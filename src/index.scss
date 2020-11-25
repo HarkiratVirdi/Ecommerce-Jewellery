@@ -1,14 +1,13 @@
 $white-color: #fff;
-$black-color: #161618;
-$primary-color: #C7915F;
-$secondary-color: #D29F70;
-$tertiary-color: #361B00;
-$filter-color: #AB7E55;
+$black-color: #2c2c2c;
+$primary-color: #F8F7F4;
+$secondary-color: #e4e3e3;
+$tertiary-color: #C7915f;
+$filter-color: #AAAAAA;
 
 @mixin text-prop{
-  color: $white-color;
+  color: $black-color;
   font-size: 1.5rem;
-
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
@@ -71,7 +70,7 @@ html{
   transform: translate(-50%, -50%);
   color: transparent;
    -webkit-text-stroke-width: 0.5px;
-  -webkit-text-stroke-color: $white-color;
+  -webkit-text-stroke-color: $black-color;
 }
 
 .logo_container{
@@ -79,8 +78,6 @@ html{
   top: 50%;
   left: 50%;
    transform: translate(-50%, -50%);
-  
-
 }
 
 header{
@@ -89,7 +86,7 @@ header{
   z-index: 1;
   
   .logo{
-  color: $white-color;
+  color: $black-color;
   position: fixed;
   top: 50px;
   text-decoration: none;
@@ -123,13 +120,13 @@ nav{
       display: inline-block;
       font-size: 1rem;  
       font-size: 1.2rem; 
-      color: $white-color;
+      color: $black-color;
       text-transform: uppercase;
       font-weight: 700;
     } 
     
     .link a{
-      color: $white-color;
+      color: $black-color;
       text-decoration: none;
       letter-spacing: 0.5rem;
     font-weight: lighter;
@@ -150,7 +147,6 @@ nav{
       position: fixed;
       right: 15rem;
       top: 5rem;
-      opacity: 0;
       z-index: 5;
       list-style: none;
       white-space: nowrap;
@@ -164,11 +160,11 @@ nav{
         margin-right: 3rem;
      
         a{
-          color: $white-color;
+          color:$white-color;
           letter-spacing: 0.5rem;
           text-transform: uppercase;
           text-decoration: none;
-         font-weight: lighter;
+         font-weight: normal;
         }
       }
 
@@ -184,7 +180,7 @@ nav{
   width: 100%;
 
   .hero_image{
-  width: 50%;
+  width: 52.5%;
   height: 100%;
   position: absolute;
   right: 0;
@@ -204,6 +200,9 @@ clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 //   width: 50%;
 // }
 
+.span_golden{
+  color: $tertiary-color;
+}
 
 
 .heading{
@@ -235,7 +234,7 @@ clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
       grid-column: 7/14;
       grid-row: 6;
       font-weight: bolder;
-      color: $white-color;
+      color: $black-color;
       }
 
       .cta-shop{
@@ -285,7 +284,7 @@ img{
   width: 90%;
   height: auto;
   transform: rotate(90deg);
-  filter: invert(100%) sepia(3%) saturate(1%) hue-rotate(0deg) brightness(100%) contrast(100%);
+  filter: invert(0%) sepia(3%) saturate(1%) hue-rotate(0deg) brightness(100%) contrast(50%);
 }  
 }
 
@@ -336,7 +335,7 @@ img{
   }
 
   .text{
-    color: $white-color;
+    color: $black-color;
     font-size: 1.4rem;
     width: 25%;
     line-height: 2.2rem;
@@ -349,7 +348,7 @@ img{
     width: 100%;
     display: block;
     margin-bottom: 2rem;
-    background: $white-color;
+    background: $black-color;
   }
 }
 
@@ -380,7 +379,7 @@ img{
     transform: translate(-50%, -50%);
 
     .image_content{
-    color: white;
+    color: black;
     font-size: 6rem;
     display: flex;
     justify-content: center;
@@ -408,7 +407,7 @@ img{
         right: 8rem;
         height: 2rem;
         width: 2rem;
-        color: $white-color;
+        color: $black-color;
         font-size: 4rem;
         z-index: 9999;
         display: none;
@@ -439,7 +438,7 @@ img{
       background: $primary-color;
       
       .cart_heading{
-        color: $white-color;
+        color: $black-color;
         font-weight: 700;
         font-size: 4rem;
         margin-bottom: 3rem;
@@ -459,7 +458,7 @@ img{
         background-color: $primary-color;
         position: fixed;
         bottom: 0;
-        color: $white-color;
+        color: $black-color;
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -476,7 +475,7 @@ img{
         }
 
         .cart_options{
-          background-color: $white-color;
+          background-color: $black-color;
           display: flex;
           flex: 1;
           padding: 2rem 3rem;
@@ -541,8 +540,9 @@ img{
 
 
 .Shop{
-  position: absolute;
+  position: relative;
   top: 0;
+  width: 100%;
   right: 0;
 
   .Shop_Section_1{
@@ -584,7 +584,7 @@ img{
 
   .Shop_Filter{
     background-color: $filter-color;
-    color: $white-color;    
+    color: $black-color;    
     height: 8rem;
     display: flex;
     justify-content: space-around;  

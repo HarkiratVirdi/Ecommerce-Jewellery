@@ -1,21 +1,15 @@
 import React, { useRef, useEffect } from "react";
-import gsap from "gsap";
+import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 function PageImage() {
-  useEffect(() => {
-    // gsap.to(".first_letters .letter", {y:100,stagger:{each: 0.1, from: "left", delay: 6}})
-    gsap.to(".image_container", {
-      x: -300,
-      scrollTrigger: { trigger: ".image_container", duration: 2 },
-    });
-  });
+  const ImageContainer = useRef(null);
 
   return (
     <main className="page_image">
       <div className="image"></div>
-      <div className="image_container">
+      <div className="image_container" ref={ImageContainer}>
         <div className="image_content">
           <div className="first_letters">
             <h1 className="letter">J</h1>
