@@ -1,7 +1,9 @@
 import { React, useRef } from "react";
 import "../../index.scss";
+import ProgressiveImage from "react-progressive-image";
 import arrow from "../../image/arrow-pointing-to-right.svg";
-import mainGirl from "../../image/joeyy-lee-s8SJ8pmxPDA-unsplash.jpg";
+import mainGirl from "../../image/compressed-ecommerce_images/comp/joeyy_lee_s8sj8pmxpd_l2IND.jpg";
+import mainGirl_original from "../../image/compressed-ecommerce_images/joeyy-lee-s8SJ8pmxPDA-unsplash.jpg";
 
 function HomePage_Section1() {
   const hero_image = useRef(null);
@@ -9,12 +11,10 @@ function HomePage_Section1() {
   return (
     <div className="HomePage_Section1">
       <div className="image_overlay"></div>
-      <img
-        className="hero_image"
-        src={mainGirl}
-        alt="Girl wearing jewellery"
-        ref={hero_image}
-      />
+
+ <ProgressiveImage src={mainGirl_original} placeholder={mainGirl}>
+        {(src) => <img className="hero_image" src={src} alt="Girl wearing black dress" />}
+      </ProgressiveImage>
 
       <div className="heading">
         <div className="grid">

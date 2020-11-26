@@ -16,7 +16,7 @@ function App() {
   console.log(route);
   let size = WindowSize();
   const data = {
-    ease: 0.07,
+    ease: 0.065,
     curr: 0,
     prev: 0,
     rounded: 0,
@@ -35,7 +35,7 @@ function App() {
 
 
   const setBodyHeight = () => {
-    document.documentElement.style.height = `${containerRef.current.getBoundingClientRect().height}px`;
+    document.body.style.height = `${containerRef.current.getBoundingClientRect().height}px`;
   };
 
   const smoothScroll = useCallback(() => {

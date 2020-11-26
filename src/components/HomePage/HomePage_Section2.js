@@ -1,9 +1,9 @@
 import React from "react";
 import ProgressiveImage from "react-progressive-image";
-import compressedImage from "../../image/showingBracelet-compressed.jpg";
+import compressedImage from "../../image/ShowingBracelets40.jpg";
 import showingBracelet_good from "../../image/showingBracelet.jpg";
-import showingBracelet2_compressed from "../../image/compressed-ecommerce_images/showingBracelet2_compressed.jpg";
-import showingBracelet2 from "../../image/showingBracelet2.jpg";
+import showingBracelet2_compressed from "../../image/compressed-ecommerce_images/comp/showingbracelet2_com_c8tTp.jpg";
+import showingBracelet2 from "../../image/compressed-ecommerce_images/showingBracelet2.jpg";
 import "../../index.scss";
 
 export default function HomePage_Section2() {
@@ -13,9 +13,7 @@ export default function HomePage_Section2() {
     <div className="container">
     
     <div className="images">
-      <ProgressiveImage  src={showingBracelet_good} placeholder={compressedImage}>
-        {(src) => <img className="img-1" src={src} alt="girl" />}
-      </ProgressiveImage>
+      <img src={compressedImage} className="img-1" alt=""/>
       </div>
       <div className="images">
       <ProgressiveImage  src={showingBracelet2} placeholder={showingBracelet2_compressed}>

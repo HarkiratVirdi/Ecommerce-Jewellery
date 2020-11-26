@@ -5,8 +5,6 @@ const AppContainer = (props) => {
   useEffect(() => {
     props.history.listen((location, action) => {
       props.setroute((prev) => prev + 1);
-
-      console.log("route Changed");
     });
   });
 

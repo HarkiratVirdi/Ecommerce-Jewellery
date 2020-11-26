@@ -1,15 +1,26 @@
 import React, { useRef, useEffect } from "react";
+import fullPageImage from "../../image/compressed-ecommerce_images/fullPageImage.jpg";
+import ProgressiveImage from "react-progressive-image";
+import fullPageImage_original from "../../image/fullPageImageEdited.jpg";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 function PageImage() {
-  const ImageContainer = useRef(null);
+  let ImageContainer = useRef(null);
+
+  useEffect(() => {
+    // gsap.to(".first_letters .letter", {y:100,stagger:{each: 0.1, from: "left", delay: 6}})
+  });
 
   return (
     <main className="page_image">
-      <div className="image"></div>
-      <div className="image_container" ref={ImageContainer}>
+      <div className="image">
+       {/* <ProgressiveImage src={fullPageImage_original} placeholder={fullPageImage}>
+        {(src) => <img className="fullPageImage" src={src} alt="Girl wearing black dress" />}
+      </ProgressiveImage> */}
+      </div>
+      <div className="image_container" ref={(el) => (ImageContainer = el)}>
         <div className="image_content">
           <div className="first_letters">
             <h1 className="letter">J</h1>

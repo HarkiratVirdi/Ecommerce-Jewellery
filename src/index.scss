@@ -80,6 +80,48 @@ html{
    transform: translate(-50%, -50%);
 }
 
+.animated_cursor {
+      border-style: solid;
+      border-color: transparent transparent gray transparent;
+      border-width: 0 25px 25px 25px;
+      height: 0;
+      opacity: 0;
+      width: 50px;
+      box-sizing: content-box;
+      position: relative;
+      margin: 20px 0 40px 0;
+}
+
+.animated_cursor::before{
+  content: "Previous";
+  position: absolute;
+  font-size: 1.5rem;
+  color: $white-color;
+  display: block;
+  
+  top:100%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  width: 100%;
+}
+
+
+.animated_cursor::after{
+ content: "";
+      position: absolute;
+      top: 25px;
+      left: -25px;
+     
+      color: $white-color;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-color: gray transparent transparent transparent;
+      border-width: 60px 50px 0 50px;
+}
+
+
 header{
   position: relative;
   top: 0;
@@ -180,14 +222,13 @@ nav{
   width: 100%;
 
   .hero_image{
-  width: 52.5%;
   height: 100%;
   position: absolute;
   right: 0;
+  width: 40%;
 clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   object-fit: cover;
   z-index: -3;
-  
 }
 
 // .image_overlay{
@@ -206,7 +247,7 @@ clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 
 
 .heading{
-  width: 700px;
+  width: 800px;
   font-family: 'vollkorn';
   line-height: 6rem;
   height: 700px;
@@ -229,9 +270,9 @@ clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
 
     h1{
-      display: grid;
-      font-size: 5rem;
-      grid-column: 7/14;
+    
+      font-size: 4rem;
+      grid-column: 7/-1;
       grid-row: 6;
       font-weight: bolder;
       color: $black-color;
@@ -239,7 +280,7 @@ clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 
       .cta-shop{
         display: grid;
-        opacity: 0;
+   
         grid-column: 7;
         grid-row: 9;
         justify-self: center;
@@ -247,9 +288,7 @@ clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
         pointer-events: all;
         
         .button_broken{
-        
           width: 8rem;
-      
           height: 4rem;
           background-color: transparent;
           border: 1px solid $tertiary-color;
@@ -357,30 +396,31 @@ img{
 
 .page_image{
    position: relative;
-   height: 50vw;
+   height: 150vh;
     margin-top: 40rem;
+    top: 0;
     overflow: hidden;
 
   .image{
-    background-image: url("./image/joeyy-lee-OibaEuEfpeg-unsplash.jpg");
+    background-image: url("./image/fullPageEdited.jpg");
     background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    background-position: top;
+    background-size: contain;
     width: 100%;
     z-index: -3;
-    height: 100%;
-    position: absolute;
+    height: 150vh;
+    position: relative;
   }
 
   .image_container{
     position: absolute;
-    top: 50%;
+    top: 52.5%;
     left: 50%;
     transform: translate(-50%, -50%);
 
     .image_content{
-    color: black;
-    font-size: 6rem;
+    color: $white-color;
+    font-size: 5.5rem;
     display: flex;
     justify-content: center;
 
@@ -597,4 +637,112 @@ img{
   top: 0;
   left: 0;
   width: 100%;
+}
+
+
+.Homepage_section4{
+  height: 100vh;
+  width: 100%;
+  margin-top:30rem;
+  position: relative;
+  top: 0;
+  margin-bottom: 5rem;
+
+  &--text{
+    color: $tertiary-color;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    width: 100%;
+   text-align: center;
+   word-spacing: 2rem;
+   letter-spacing: 1rem;
+    font-size: 5rem;
+    transform: translate(-50%, -50%);
+  }
+
+  &--images{
+    .image--1 img{
+      height: 40rem;
+      position: absolute;
+      top: 0;
+      left: 18rem;
+    }
+
+    .image--2 img{
+      height: 40rem;
+      position: absolute;
+      top: 55%;
+      z-index: -2;
+      left: 40%;
+    }
+
+    .image--3 img{
+      position: absolute;
+      height: 40rem;
+      top: 18%;
+      right: 10%;
+      z-index: -2;
+    }
+
+  }
+
+}
+
+.Homepage_section5{
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  margin-top: 20rem;
+
+
+.slider__right--background{
+        background-color: $white-color;
+        position: absolute;
+        right: 0;
+        width: 50%;
+        height: 100%;
+        z-index: -3;
+      }
+
+
+  .slider{
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: 25%;
+    width: 80%;
+    margin:auto;
+    align-items: center;
+
+    &__left{
+      padding: 7rem 14rem;
+      &--carousel{
+        img{
+          height: 26.7rem;
+          width: 33.3rem;
+          position: relative;
+          z-index: -1;
+        }
+      }
+    }
+
+    &__right{
+      width: 50%;
+      height: 100%;
+
+      
+
+        &--carousel{
+          img{
+            height: 100%;
+            position: relative;
+            z-index: -1;
+            width: 100%;
+          }
+        }
+
+    }
+  }
 }
