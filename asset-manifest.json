@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Ecommerce-Jewellery/static/css/main.80768423.chunk.css",
-    "main.js": "/Ecommerce-Jewellery/static/js/main.cea295cc.chunk.js",
-    "main.js.map": "/Ecommerce-Jewellery/static/js/main.cea295cc.chunk.js.map",
+    "main.js": "/Ecommerce-Jewellery/static/js/main.c012dbd7.chunk.js",
+    "main.js.map": "/Ecommerce-Jewellery/static/js/main.c012dbd7.chunk.js.map",
     "runtime-main.js": "/Ecommerce-Jewellery/static/js/runtime-main.6a9608a1.js",
     "runtime-main.js.map": "/Ecommerce-Jewellery/static/js/runtime-main.6a9608a1.js.map",
     "static/js/2.b89b91a9.chunk.js": "/Ecommerce-Jewellery/static/js/2.b89b91a9.chunk.js",
@@ -35,6 +35,6 @@
     "static/js/runtime-main.6a9608a1.js",
     "static/js/2.b89b91a9.chunk.js",
     "static/css/main.80768423.chunk.css",
-    "static/js/main.cea295cc.chunk.js"
+    "static/js/main.c012dbd7.chunk.js"
   ]
 }
