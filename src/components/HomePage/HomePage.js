@@ -4,9 +4,12 @@ import HomePage_Section2 from "./HomePage_Section2";
 import HomePage_Section3 from "./HomePage_Section3";
 import Homepage_section4 from "./Homepage_section4";
 import Homepage_section5 from "./Homepage_section5";
+import ScrollTop from "../Functions/ScrollTop";
+
 function HomePage() {
   return (
     <div className="HomePage">
+      <ScrollTop />
       <HomePage_Section1 />
       <HomePage_Section2/>
       <HomePage_Section3 />

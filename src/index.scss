@@ -1,24 +1,6 @@
-$white-color: #fff;
-$black-color: #2c2c2c;
-$primary-color: #F8F7F4;
-$secondary-color: #e4e3e3;
-$tertiary-color: #C7915f;
-$filter-color: #AAAAAA;
-
-@mixin text-prop{
-  color: $black-color;
-  font-size: 1.5rem;
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;700&display=swap');
-
-*{
-  margin: 0;
-  padding:0;
-  box-sizing: border-box;
-}
+@import './base';
+@import './animation';
+@import './gallery';
 
 
 
@@ -27,13 +9,6 @@ body {
   overflow-x: hidden;
   
 }
-
-html{
-  font-family: 'Karla', sans-serif;
-  font-size: 62.5%;
-  
-}
-
 
 
 .container{
@@ -77,6 +52,8 @@ html{
    position: absolute;
   top: 50%;
   left: 50%;
+  display: inline-block;
+  transition: opacity 0.5s;
    transform: translate(-50%, -50%);
 }
 
@@ -89,10 +66,37 @@ html{
       width: 50px;
       box-sizing: content-box;
       position: relative;
+      top: 50%;
+      right: 50%;
       margin: 20px 0 40px 0;
 }
 
-.animated_cursor::before{
+.animated_cursor::after{
+ content: "";
+      position: absolute;
+      top: 25px;
+      left: -25px;
+      color: $white-color;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-color: gray transparent transparent transparent;
+      border-width: 60px 50px 0 50px;
+}
+
+.animated_cursor--left {
+      border-style: solid;
+      border-color: transparent transparent gray transparent;
+      border-width: 0 25px 25px 25px;
+      height: 0;
+      opacity: 0;
+      width: 50px;
+      box-sizing: content-box;
+      position: relative;
+      margin: 20px 0 40px 0;
+}
+
+.animated_cursor--left::before{
   content: "Previous";
   position: absolute;
   font-size: 1.5rem;
@@ -107,7 +111,48 @@ html{
 }
 
 
-.animated_cursor::after{
+.animated_cursor--left::after{
+ content: "";
+      position: absolute;
+      top: 25px;
+      left: -25px;
+     
+      color: $white-color;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-color: gray transparent transparent transparent;
+      border-width: 60px 50px 0 50px;
+}
+
+.animated_cursor--right {
+      border-style: solid;
+      border-color: transparent transparent gray transparent;
+      border-width: 0 25px 25px 25px;
+      height: 0;
+      opacity: 0;
+      width: 50px;
+      box-sizing: content-box;
+      position: relative;
+      margin: 20px 0 40px 0;
+}
+
+.animated_cursor--right::before{
+  content: "Next";
+  position: absolute;
+  font-size: 1.5rem;
+  color: $white-color;
+  display: block;
+  top:100%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  width: 100%;
+}
+
+
+.animated_cursor--right::after{
  content: "";
       position: absolute;
       top: 25px;
@@ -122,6 +167,7 @@ html{
 }
 
 
+
 header{
   position: relative;
   top: 0;
@@ -129,8 +175,12 @@ header{
   
   .logo{
   color: $black-color;
-  position: fixed;
+  position: absolute;
   top: 50px;
+  display: block;
+  opacity: 0;
+  will-change: opacity;
+  transition: opacity 0.5s;
   text-decoration: none;
   left: 48.3%;
   transform: translate(-50%, -50%);
@@ -207,39 +257,41 @@ nav{
           text-transform: uppercase;
           text-decoration: none;
          font-weight: normal;
+         transition: opacity 0.5s;
         }
       }
-
-    
     }
-
 }
 
 
-.HomePage_Section1{
+.Homepage_section1{
   position: relative;
   height: 100vh;
   width: 100%;
+
+  // &--overlay{
+  //    height: 20%;
+  //   width: 35%;
+  //   z-index: -2;
+  //   position: absolute;
+  //   bottom: 10%;
+  //   left: 0;
+  //   background: $tertiary-color;
+  //   opacity: 0.6;
+  // }
 
   .hero_image{
   height: 100%;
   position: absolute;
   right: 0;
+  transform-origin: top center;
+  will-change: transform;
   width: 40%;
-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   object-fit: cover;
   z-index: -3;
 }
 
-// .image_overlay{
-//   position: absolute;
-//   top: 0;
-//   right: 0;
-//   height: 100vh;
-//   z-index:-1;
-//   background-color: $primary-color;
-//   width: 50%;
-// }
 
 .span_golden{
   color: $tertiary-color;
@@ -330,11 +382,20 @@ img{
 }
 
 
-.HomePage_Section2{
+.Homepage_section2{
   height: 100vh;
   margin-top:20rem;
   position: relative;
   top: 0;
+
+  // &--overlay{
+  //   height: 30%;
+  //   width: 35%;
+  //   z-index: -2;
+  //   position: absolute;
+  //   background: $tertiary-color;
+  //   opacity: 0.6;
+  // }
 
   .row{
     display: flex;
@@ -344,32 +405,33 @@ img{
     }
 
 .images{
-  height: 40rem;
-  width: 25rem;
+  position: relative;
+  top: 0;
+  left:0;
 }
 
 
 
-  img{
-    
+  img{ 
     object-fit: cover;
   }
 
   .img-1{
-    position: absolute;
-    top:0rem;
-    height: 50%;
-    width: 18%;
-    left: 50rem;
+    position: relative;
+    top:0%;
+    height: 40rem;
+    width: 25rem;
+    left: 50%;
     z-index: 3;
   }
 
   .img-2{
     position: absolute;
-    top: 30rem;
-    left: 30rem;
-    height: 50%;
-    width: 18%;
+    top: 35%;
+    left: 20%;
+   height: 40rem;
+   width: 25rem;
+   display: inline;
     z-index: 2;
   }
 
@@ -408,6 +470,10 @@ img{
     background-size: contain;
     width: 100%;
     z-index: -3;
+    display: block;
+    will-change: transform;
+    transform: matrix(1.1, 0, 0, 1.1, 0, 0);
+    transform-origin: top center;
     height: 150vh;
     position: relative;
   }
@@ -494,14 +560,13 @@ img{
       .cart_footer{
         height: 7rem;
         width: 100%;
-        padding: 0 0 0 2rem;
-        background-color: $primary-color;
+
+        background-color: $white-color;
         position: fixed;
         bottom: 0;
         color: $black-color;
         display: flex;
         justify-content: space-around;
-        align-items: center;
         text-transform: uppercase;
 
         h3, a{
@@ -511,25 +576,64 @@ img{
 
         .cart_total{
           flex: 4;
-          
+          color: $white-color;
+          background-color: #2c2c2c;
+          padding: 2rem; 
         }
 
         .cart_options{
-          background-color: $black-color;
-          display: flex;
-          flex: 1;
-          padding: 2rem 3rem;
-          color: $black-color;
-          justify-content: center;
-          align-items: center;
+           flex: 1;
+          background-color: $white-color;
+
+&--checkout{
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+  font-size: 1.8rem;
+  align-self: center;
+  text-decoration: none;
+  color: $black-color;
+  position: relative;
+  background: $black-color;
+  transition: all .35s;
+
+
+&:after{
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: $white-color;
+  transition: all .35s;
+}
+
+&:hover{
+  background: $black-color;
+  color: $white-color;
+}
+
+&:hover:after{
+  height: 0%;
+}
+
+
+
+  & label{
+    position: relative;
+    z-index: 999;
+  }
+}
+
+
+
+
+
 
         }
-
-
-
       }
-
-
     }
 }
 
@@ -632,6 +736,14 @@ img{
   }
 }
 
+.hidden {
+  display: none;
+}
+
+.visuallyhidden {
+  opacity: 0;
+}
+
 .scroll_container{
   position: fixed;
   top: 0;
@@ -650,7 +762,7 @@ img{
 
   &--text{
     color: $tertiary-color;
-    position: absolute;
+    position: relative;
     top: 50%;
     left:50%;
     width: 100%;
@@ -662,22 +774,25 @@ img{
   }
 
   &--images{
-    .image--1 img{
+    position: relative;
+    top:0;
+    height: 100vh;
+    .image--1 {
       height: 40rem;
       position: absolute;
-      top: 0;
+      top: 0%;
       left: 18rem;
     }
 
-    .image--2 img{
+    .image--2 {
       height: 40rem;
-      position: absolute;
-      top: 55%;
+      position: relative;
+      top: 50%;
       z-index: -2;
       left: 40%;
     }
 
-    .image--3 img{
+    .image--3 {
       position: absolute;
       height: 40rem;
       top: 18%;
@@ -691,7 +806,7 @@ img{
 
 .Homepage_section5{
   position: relative;
-  height: 100vh;
+  height: 200vh;
   width: 100%;
   top: 0;
   margin-top: 20rem;
@@ -702,22 +817,22 @@ img{
         position: absolute;
         right: 0;
         width: 50%;
-        height: 100%;
+        height: 100vh;
         z-index: -3;
       }
 
 
   .slider{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     position: relative;
-    top: 25%;
+    top: 7.5%;
     width: 80%;
     margin:auto;
     align-items: center;
 
     &__left{
-      padding: 7rem 14rem;
+      padding: 7rem 8rem 7rem 20rem;
       &--carousel{
         img{
           height: 26.7rem;
@@ -731,7 +846,7 @@ img{
     &__right{
       width: 50%;
       height: 100%;
-
+      padding: 0 6rem;
       
 
         &--carousel{
@@ -742,7 +857,6 @@ img{
             width: 100%;
           }
         }
-
     }
   }
 }

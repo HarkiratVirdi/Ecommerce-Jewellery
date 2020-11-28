@@ -1,0 +1,17 @@
+@keyframes button-roll-out{
+    0%{
+        color: #000;
+    }
+    35%{
+    transform: translateY(20px);
+    opacity: 0;
+    }
+
+    60%{
+    opacity: 1;
+    transform: translateY(-15px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}

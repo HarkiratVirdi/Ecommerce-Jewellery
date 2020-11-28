@@ -75,7 +75,33 @@ html {
   margin: 20px 0 40px 0;
 }
 
-.animated_cursor::before {
+.animated_cursor::after {
+  content: "";
+  position: absolute;
+  top: 25px;
+  left: -25px;
+  color: #fff;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: gray transparent transparent transparent;
+  border-width: 60px 50px 0 50px;
+}
+
+.animated_cursor--left {
+  border-style: solid;
+  border-color: transparent transparent gray transparent;
+  border-width: 0 25px 25px 25px;
+  height: 0;
+  opacity: 0;
+  width: 50px;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  position: relative;
+  margin: 20px 0 40px 0;
+}
+
+.animated_cursor--left::before {
   content: "Previous";
   position: absolute;
   font-size: 1.5rem;
@@ -89,7 +115,48 @@ html {
   width: 100%;
 }
 
-.animated_cursor::after {
+.animated_cursor--left::after {
+  content: "";
+  position: absolute;
+  top: 25px;
+  left: -25px;
+  color: #fff;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: gray transparent transparent transparent;
+  border-width: 60px 50px 0 50px;
+}
+
+.animated_cursor--right {
+  border-style: solid;
+  border-color: transparent transparent gray transparent;
+  border-width: 0 25px 25px 25px;
+  height: 0;
+  opacity: 0;
+  width: 50px;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  position: relative;
+  margin: 20px 0 40px 0;
+}
+
+.animated_cursor--right::before {
+  content: "Next";
+  position: absolute;
+  font-size: 1.5rem;
+  color: #fff;
+  display: block;
+  top: 100%;
+  left: 50%;
+  text-align: center;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 100%;
+  width: 100%;
+}
+
+.animated_cursor--right::after {
   content: "";
   position: absolute;
   top: 25px;
@@ -691,7 +758,7 @@ header .list-right .link a {
 
 .Homepage_section5 {
   position: relative;
-  height: 100vh;
+  height: 200vh;
   width: 100%;
   top: 0;
   margin-top: 20rem;
@@ -702,7 +769,7 @@ header .list-right .link a {
   position: absolute;
   right: 0;
   width: 50%;
-  height: 100%;
+  height: 100vh;
   z-index: -3;
 }
 
@@ -710,10 +777,11 @@ header .list-right .link a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: relative;
-  top: 25%;
+  top: 12.5%;
   width: 80%;
   margin: auto;
   -webkit-box-align: center;
@@ -722,7 +790,7 @@ header .list-right .link a {
 }
 
 .Homepage_section5 .slider__left {
-  padding: 7rem 14rem;
+  padding: 7rem 8rem 7rem 14rem;
 }
 
 .Homepage_section5 .slider__left--carousel img {
@@ -735,6 +803,7 @@ header .list-right .link a {
 .Homepage_section5 .slider__right {
   width: 50%;
   height: 100%;
+  padding: 0 6rem;
 }
 
 .Homepage_section5 .slider__right--carousel img {

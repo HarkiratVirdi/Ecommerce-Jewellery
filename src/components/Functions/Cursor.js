@@ -6,7 +6,7 @@ let mainCursor = useRef(null);
   let [PositionX, setPositionX] = useState(0);
   let [PositionY, setPositionY] = useState(0);
   const [Hidden, setHidden] = useState(true);
-
+const [enterLeft, setEnterLeft] = useState(false);
     // const positionRef = React.useRef({
     //     mouseX: 0,
     //     mouseY: 0,
@@ -32,7 +32,18 @@ let mainCursor = useRef(null);
   myRef.current.addEventListener("mousemove", onMouseMove);
   myRef.current.addEventListener("mouseenter", onMouseEnter);
   myRef.current.addEventListener("mouseleave", onMouseLeave);
+    myRefLeft.current.addEventListener("mouseenter", onMouseEnterLeft);
+    myRefLeft.current.addEventListener("mouseleave", onMouseLeaveLeft);
+
 }, []);
+
+
+useEffect(() => {
+    
+         gsap.fromTo(mainCursor, {
+            opacity:0,
+        }, {opacity: 1, duration: 0.5});
+}, [enterLeft]);
 
 
 useEffect(() => {
@@ -54,6 +65,15 @@ useEffect(() => {
     // myRef.current.removeEventListener("mouseenter", onMouseEnter);
     // myRef.current.removeEventListener("mouseleave", onMouseLeave);
 
+    const onMouseEnterLeft = () => {
+        setEnterLeft(true);
+        console.log("EnterLeft value", enterLeft);
+    }
+
+    const onMouseLeaveLeft = () => {
+        setEnterLeft(false);
+      
+    }
 
   const onMouseMove = (e) => {
     setPositionX(e.clientX);
@@ -62,18 +82,12 @@ useEffect(() => {
 
   const onMouseLeave = () => {
     setHidden(true);
-    document.body.style.cursor = "default";
-    console.log("mouse left");
-    console.log("hidden" ,Hidden); 
-    
+    document.body.style.cursor = "default";    
 };
 
 const onMouseEnter = () => {
-    console.log("Mouse Entered");
     document.body.style.cursor = "none";
     setHidden(false);
-  
-    console.log("On Enterning ",Hidden);
     }
 
 
@@ -81,7 +95,7 @@ const onMouseEnter = () => {
 
   return (
     <div ref = {el => {mainCursor = el}}
-      className="animated_cursor"
+      className={`${enterLeft ? "animated_cursor--left" : "animated_cursor--right"}`}
       style={{ left: `${PositionX}px`, top: `${PositionY}px` }}
     />
   );

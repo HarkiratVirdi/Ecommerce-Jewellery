@@ -25,7 +25,7 @@ function Homepage_section4() {
                 scrub: true,
                 duration: 1,
             },  
-            y: -130,
+            y: -200,
         })
 
         gsap.to(imgCenter, {
@@ -34,10 +34,9 @@ function Homepage_section4() {
                 start: "top center",
                 toggleActions: "restart pause reverse none",
                 scrub: true,
-                markers: true,
                 duration: 1,
             }, 
-            y: -250,
+            y: -100,
         })
         gsap.to(imgRight, {
           
@@ -48,7 +47,7 @@ function Homepage_section4() {
                 scrub: true,  
                 duration: 1,  
             }, 
-             y: -200,
+             y: -100,
         })
 
         // gsap.to(scrollTrigger, {
@@ -71,15 +70,14 @@ function Homepage_section4() {
     </div>
 
     <div className="Homepage_section4--images">
-        <div className="image--1">
-            <img ref={el => {imgLeft = el}} src={img1} alt="Girl with flowers"/>
-        </div>
-        <div className="image--2">
-            <img ref={el => {imgCenter = el}} src={img2} alt="Girl with flowers"/>
-        </div>
-        <div className="image--3">
-            <img ref={el => {imgRight = el}} src={img3} alt="Girl with flowers"/>
-        </div>
+        
+            <img className="image--1" ref={el => {imgLeft = el}} src={img1} alt="Girl with flowers"/>
+       
+                  <img className="image--2" ref={el => {imgCenter = el}} src={img2} alt="Girl with flowers"/>
+       
+       
+            <img className="image--3" ref={el => {imgRight = el}} src={img3} alt="Girl with flowers"/>
+      
     </div>
   </div>;
 }
