@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/Ecommerce-Jewellery/static/css/main.80768423.chunk.css",
+    "main.js": "/Ecommerce-Jewellery/static/js/main.cea295cc.chunk.js",
+    "main.js.map": "/Ecommerce-Jewellery/static/js/main.cea295cc.chunk.js.map",
+    "runtime-main.js": "/Ecommerce-Jewellery/static/js/runtime-main.6a9608a1.js",
+    "runtime-main.js.map": "/Ecommerce-Jewellery/static/js/runtime-main.6a9608a1.js.map",
+    "static/js/2.b89b91a9.chunk.js": "/Ecommerce-Jewellery/static/js/2.b89b91a9.chunk.js",
+    "static/js/2.b89b91a9.chunk.js.map": "/Ecommerce-Jewellery/static/js/2.b89b91a9.chunk.js.map",
+    "index.html": "/Ecommerce-Jewellery/index.html",
+    "static/css/main.80768423.chunk.css.map": "/Ecommerce-Jewellery/static/css/main.80768423.chunk.css.map",
+    "static/js/2.b89b91a9.chunk.js.LICENSE.txt": "/Ecommerce-Jewellery/static/js/2.b89b91a9.chunk.js.LICENSE.txt",
+    "static/media/BlackGirl_Comp.ff3f7948.jpg": "/Ecommerce-Jewellery/static/media/BlackGirl_Comp.ff3f7948.jpg",
+    "static/media/ShowingBracelets40.64dbe37c.jpg": "/Ecommerce-Jewellery/static/media/ShowingBracelets40.64dbe37c.jpg",
+    "static/media/anchor_bracelet_mens.73dc18d7.jpg": "/Ecommerce-Jewellery/static/media/anchor_bracelet_mens.73dc18d7.jpg",
+    "static/media/arrow-pointing-to-right.4509a724.svg": "/Ecommerce-Jewellery/static/media/arrow-pointing-to-right.4509a724.svg",
+    "static/media/index.scss": "/Ecommerce-Jewellery/static/media/fullPageEdited.7db95c71.jpg",
+    "static/media/guardian-angel-earrings.f770b6df.jpg": "/Ecommerce-Jewellery/static/media/guardian-angel-earrings.f770b6df.jpg",
+    "static/media/joeyy-lee-s8SJ8pmxPDA-unsplash.aad32105.jpg": "/Ecommerce-Jewellery/static/media/joeyy-lee-s8SJ8pmxPDA-unsplash.aad32105.jpg",
+    "static/media/joeyy_lee_7tdqxrc8hh_TjQPx.2c7710e3.jpg": "/Ecommerce-Jewellery/static/media/joeyy_lee_7tdqxrc8hh_TjQPx.2c7710e3.jpg",
+    "static/media/joeyy_lee_c2chydc76h_JIZjc.6086ce42.jpg": "/Ecommerce-Jewellery/static/media/joeyy_lee_c2chydc76h_JIZjc.6086ce42.jpg",
+    "static/media/joeyy_lee_jeiene4k3z_aJCKU.8ac27f9e.jpg": "/Ecommerce-Jewellery/static/media/joeyy_lee_jeiene4k3z_aJCKU.8ac27f9e.jpg",
+    "static/media/joeyy_lee_oibaeuefpe_Hi6jF.628a88c7.jpg": "/Ecommerce-Jewellery/static/media/joeyy_lee_oibaeuefpe_Hi6jF.628a88c7.jpg",
+    "static/media/joeyy_lee_qzftqhqn7y_VdQsk.f091c49f.jpg": "/Ecommerce-Jewellery/static/media/joeyy_lee_qzftqhqn7y_VdQsk.f091c49f.jpg",
+    "static/media/joeyy_lee_qzftqhqn7y_X40qL.630e443d.jpg": "/Ecommerce-Jewellery/static/media/joeyy_lee_qzftqhqn7y_X40qL.630e443d.jpg",
+    "static/media/joeyy_lee_rskxe86fzw_Q9VuO.d551ed28.jpg": "/Ecommerce-Jewellery/static/media/joeyy_lee_rskxe86fzw_Q9VuO.d551ed28.jpg",
+    "static/media/joeyy_lee_s5n17pzcb0_g3l4b.f8fbc1c8.jpg": "/Ecommerce-Jewellery/static/media/joeyy_lee_s5n17pzcb0_g3l4b.f8fbc1c8.jpg",
+    "static/media/joeyy_lee_s8sj8pmxpd_l2IND.11450a4e.jpg": "/Ecommerce-Jewellery/static/media/joeyy_lee_s8sj8pmxpd_l2IND.11450a4e.jpg",
+    "static/media/joeyy_lee_sz_brewpxr_riJns.b758ecd3.jpg": "/Ecommerce-Jewellery/static/media/joeyy_lee_sz_brewpxr_riJns.b758ecd3.jpg",
+    "static/media/patterned_bangle.0350c398.jpg": "/Ecommerce-Jewellery/static/media/patterned_bangle.0350c398.jpg",
+    "static/media/showingBracelet.374cd3f0.jpg": "/Ecommerce-Jewellery/static/media/showingBracelet.374cd3f0.jpg",
+    "static/media/showingBracelet2.f90d4e9c.jpg": "/Ecommerce-Jewellery/static/media/showingBracelet2.f90d4e9c.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6a9608a1.js",
+    "static/js/2.b89b91a9.chunk.js",
+    "static/css/main.80768423.chunk.css",
+    "static/js/main.cea295cc.chunk.js"
+  ]
+}
