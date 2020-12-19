@@ -2,7 +2,7 @@ import React, {useState, useRef, useEffect, useCallback } from "react";
 import Nav from "./components/Nav/Nav";
 import Shop from "./components/Shop/Shop";
 import Loading from "./components/Loading/Loading.js";
-import { Link, HashRouter as Router, Switch, Route, withRouter } from "react-router-dom";
+import { Link, HashRouter, Switch, Route, withRouter } from "react-router-dom";
 import HomePage from "./components/HomePage/HomePage";
 import { motion, AnimatePresence } from "framer-motion";
 import {WindowSize} from "./components/Functions/WindowSize";
@@ -49,7 +49,7 @@ function App() {
 
 
 
-  return <Router>
+  return <HashRouter>
           <AnimatePresence>
             <Switch>
               <div className="App">
@@ -72,7 +72,7 @@ function App() {
               </div>
             </Switch>
           </AnimatePresence>
-        </Router>
+        </HashRouter>
 }
 
 export default withRouter(App);

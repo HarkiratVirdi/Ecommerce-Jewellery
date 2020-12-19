@@ -44,18 +44,18 @@ function HomePage_Section1() {
         {(src) => <img className="hero_image" ref={el => {hero_image = el}} src={src} alt="Girl wearing black dress" />}
       </ProgressiveImage>
 
-      <div className="heading">
         <div className="grid">
+      <div className="heading">
           <div className="behind-overlay"></div>
           <h1>Handmade <span className="span_golden">Jewellery</span> For The <span className="span_golden">Modern</span> Woman</h1>
           <div className="cta-shop">
             <div className="button_broken"></div>
             <button>Shop</button>
           </div>
+        </div>
           <div className="arrow-down">
             <img src={arrow} alt="" />
           </div>
-        </div>
       </div>
     </div>
   );

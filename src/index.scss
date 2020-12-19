@@ -37,6 +37,7 @@ body {
   background-color: $black-color;
 }
 
+
 .big_logo{
   font-size: 20rem;
   position: absolute;
@@ -287,8 +288,10 @@ nav{
   transform-origin: top center;
   will-change: transform;
   width: 40%;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  object-fit: cover;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  -o-object-fit: cover;
+     object-fit: cover;
   z-index: -3;
 }
 
@@ -298,17 +301,13 @@ nav{
 }
 
 
-.heading{
-  width: 800px;
-  font-family: 'vollkorn';
-  line-height: 6rem;
-  height: 700px;
-  .grid{
-  display: grid;
-  grid-template-columns: repeat(14,50px);
-  grid-template-rows: repeat(14,50px);
-  justify-items: start;
-  align-items: start;
+.grid{
+  width: 40%;
+  
+  .heading{
+    font-family: 'vollkorn';
+    line-height: 6rem;
+
 
   .behind-overlay{
     background-color: $secondary-color;
@@ -366,16 +365,15 @@ nav{
 
 
 .arrow-down{
-  display: grid;
-  grid-row: -1;
-  grid-column: 8;
+
 img{
-  display: grid;
-  grid-row: 15;
-  width: 90%;
-  height: auto;
+  position: absolute;
+  bottom: 2rem;
+  left: 30%;
+  width: 3%;
   transform: rotate(90deg);
-  filter: invert(0%) sepia(3%) saturate(1%) hue-rotate(0deg) brightness(100%) contrast(50%);
+  -webkit-filter: invert(0%) sepia(3%) saturate(1%) hue-rotate(0deg) brightness(100%) contrast(50%);
+          filter: invert(0%) sepia(3%) saturate(1%) hue-rotate(0deg) brightness(100%) contrast(50%);
 }  
 }
 
@@ -388,32 +386,21 @@ img{
   position: relative;
   top: 0;
 
-  // &--overlay{
-  //   height: 30%;
-  //   width: 35%;
-  //   z-index: -2;
-  //   position: absolute;
-  //   background: $tertiary-color;
-  //   opacity: 0.6;
-  // }
-
   .row{
     display: flex;
-    .container{
-      display: flex;
-      justify-content: space-around;
-    }
+
 
 .images{
   position: relative;
   top: 0;
   left:0;
+  width: 100%;
+  height: 100%;
 }
 
-
-
   img{ 
-    object-fit: cover;
+    -o-object-fit: cover; 
+       object-fit: cover;
   }
 
   .img-1{
@@ -421,9 +408,11 @@ img{
     top:0%;
     height: 40rem;
     width: 25rem;
-    left: 50%;
+    left: 40%;
     z-index: 3;
   }
+
+
 
   .img-2{
     position: absolute;
@@ -654,7 +643,8 @@ img{
       img{
         height: 100%;
         width: 100%;
-        object-fit: cover;
+        -o-object-fit: cover;
+           object-fit: cover;
       }
 
   }
@@ -698,7 +688,8 @@ img{
     img{
       height: 100vh;
       width: 100%;
-      object-fit: cover;
+      -o-object-fit: cover;
+         object-fit: cover;
     }
 
     .Shop_Section_1_Text{
@@ -719,7 +710,8 @@ img{
       bottom: 5rem;
    right: 50%;
         transform: rotate(90deg);
-  filter: invert(100%) sepia(3%) saturate(1%) hue-rotate(0deg) brightness(100%) contrast(100%);
+  -webkit-filter: invert(100%) sepia(3%) saturate(1%) hue-rotate(0deg) brightness(100%) contrast(100%);
+          filter: invert(100%) sepia(3%) saturate(1%) hue-rotate(0deg) brightness(100%) contrast(100%);
     }
   }
 
@@ -859,4 +851,14 @@ img{
         }
     }
   }
+}
+
+
+@media screen and (max-width: 870px) {
+ 
+.hide{
+  display: none !important;
+}
+
+
 }

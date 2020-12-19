@@ -12,45 +12,22 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 export default function HomePage_Section2() {
-let Image1 = useRef(null);
-let Image2 = useRef(null);
 
-  useEffect(() => {
-      //   gsap.to(Image1, {
-      // scrollTrigger:{
-      //   trigger: Image2, 
-      //   start: "top center",
-      //   toggleActions: "restart pause reverse pause",
-      //   scrub: true,  
-      // },
-      // transform: 'matrix(0.96,0,0,0.96,0, 0)',
-     
-    
-        gsap.to(Image2, {
-      scrollTrigger:{
-        trigger: Image2, 
-        start: "top center",
-        toggleActions: "restart pause reverse pause",
-        scrub: true,  
-      },
-      // transform: 'matrix(0.96,0,0,0.96,0, 0)',
-    y: -20
-    });
-  });
 
   return (
+    <div className="container">
     <div className="Homepage_section2">
     <div className="Homepage_section2--overlay"></div>
     <div className="row">
-    <div className="container">
     
     <div className="images">
-      <img src={compressedImage} ref={el => {Image1 = el}} className="img-1" alt=""/>
-      </div>
+      <img src={compressedImage} className="img-1" alt=""/>
+     
       
       <ProgressiveImage  src={showingBracelet2} placeholder={showingBracelet2_compressed}>
-        {(src) => <img ref={el => {Image2 = el}} className="img-2" src={src} alt="girl" />}
+        {(src) => <img className="hide img-2" src={src} alt="girl" />}
       </ProgressiveImage>
+       </div>
     <div className="text">
         <p>Tira is a Luxury jewellery that reflects elegance with the focus on the highest quantily of silver, gold. All jewellery crafeted in Toronto, Canada.</p>
 
