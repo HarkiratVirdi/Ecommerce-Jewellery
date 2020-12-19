@@ -11,7 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 function HomePage_Section1() {
   let hero_image = useRef(null);
-  let overlay = useRef(null);
+  // let overlay = useRef(null);
   useEffect(() => {
          gsap.to(hero_image, {
       scrollTrigger:{
@@ -38,14 +38,34 @@ function HomePage_Section1() {
 
   return (
     <div className="Homepage_section1">
-      <div ref={el => {overlay = el}} className="Homepage_section1--overlay"></div>
+      {/* <div ref={el => {overlay = el}} className="Homepage_section1--overlay"></div> */}
 
+<div className="container-left">
+    <div className="hero">
+    <div className="hero__text-container">
+          <div className="hero__overlay hide"></div>
+       <div class="hero__text">
+            <h1>Handmade <span className="span_golden">
+        Jewellery
+            </span> For The <span className="span_golden">
+            Modern
+            </span>  Woman</h1>
+             <div className="cta-shop">
+            <div className="button_broken"></div>
+            <button>Shop</button>
+          </div>
+           
+          </div>
+    </div>
  <ProgressiveImage src={mainGirl_original} placeholder={mainGirl}>
         {(src) => <img className="hero_image" ref={el => {hero_image = el}} src={src} alt="Girl wearing black dress" />}
       </ProgressiveImage>
+    </div>
+</div>
 
-        <div className="grid">
-      <div className="heading">
+
+        {/* <div className="grid">
+         <div className="heading">
           <div className="behind-overlay"></div>
           <h1>Handmade <span className="span_golden">Jewellery</span> For The <span className="span_golden">Modern</span> Woman</h1>
           <div className="cta-shop">
@@ -53,10 +73,11 @@ function HomePage_Section1() {
             <button>Shop</button>
           </div>
         </div>
-          <div className="arrow-down">
+         
+      </div> */}
+       <div className="arrow-down">
             <img src={arrow} alt="" />
           </div>
-      </div>
     </div>
   );
 }

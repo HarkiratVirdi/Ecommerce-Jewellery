@@ -10,6 +10,10 @@ $filter-color: #AAAAAA;
   font-size: 1.5rem;
 }
 
+::selection{
+  background-color: #dfb29b;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;700&display=swap');
@@ -24,4 +28,13 @@ $filter-color: #AAAAAA;
 html{
   font-family: 'Karla', sans-serif;
   font-size: 62.5%;
+}
+
+.container-right{
+  width: 85%;
+  margin-right: auto;
+}
+.container-left{
+  width: 85%;
+  margin-left: auto;
 }

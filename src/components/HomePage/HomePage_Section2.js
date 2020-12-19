@@ -17,7 +17,7 @@ export default function HomePage_Section2() {
   return (
     <div className="container">
     <div className="Homepage_section2">
-    <div className="Homepage_section2--overlay"></div>
+    {/* <div className="Homepage_section2--overlay"></div> */}
     <div className="row">
     
     <div className="images">
@@ -25,7 +25,7 @@ export default function HomePage_Section2() {
      
       
       <ProgressiveImage  src={showingBracelet2} placeholder={showingBracelet2_compressed}>
-        {(src) => <img className="hide img-2" src={src} alt="girl" />}
+        {(src) => <img className="hide img-2" src={src} alt="girl holding Jewellery" />}
       </ProgressiveImage>
        </div>
     <div className="text">
