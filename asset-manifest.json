@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Ecommerce-Jewellery/static/css/main.79557bc8.chunk.css",
-    "main.js": "/Ecommerce-Jewellery/static/js/main.1d7b7cd2.chunk.js",
-    "main.js.map": "/Ecommerce-Jewellery/static/js/main.1d7b7cd2.chunk.js.map",
+    "main.css": "/Ecommerce-Jewellery/static/css/main.19d0b4cc.chunk.css",
+    "main.js": "/Ecommerce-Jewellery/static/js/main.e6f98afc.chunk.js",
+    "main.js.map": "/Ecommerce-Jewellery/static/js/main.e6f98afc.chunk.js.map",
     "runtime-main.js": "/Ecommerce-Jewellery/static/js/runtime-main.6a9608a1.js",
     "runtime-main.js.map": "/Ecommerce-Jewellery/static/js/runtime-main.6a9608a1.js.map",
     "static/js/2.bcd0829e.chunk.js": "/Ecommerce-Jewellery/static/js/2.bcd0829e.chunk.js",
     "static/js/2.bcd0829e.chunk.js.map": "/Ecommerce-Jewellery/static/js/2.bcd0829e.chunk.js.map",
     "index.html": "/Ecommerce-Jewellery/index.html",
-    "static/css/main.79557bc8.chunk.css.map": "/Ecommerce-Jewellery/static/css/main.79557bc8.chunk.css.map",
+    "static/css/main.19d0b4cc.chunk.css.map": "/Ecommerce-Jewellery/static/css/main.19d0b4cc.chunk.css.map",
     "static/js/2.bcd0829e.chunk.js.LICENSE.txt": "/Ecommerce-Jewellery/static/js/2.bcd0829e.chunk.js.LICENSE.txt",
     "static/media/BlackGirl_Comp.ff3f7948.jpg": "/Ecommerce-Jewellery/static/media/BlackGirl_Comp.ff3f7948.jpg",
     "static/media/ShowingBracelets40.64dbe37c.jpg": "/Ecommerce-Jewellery/static/media/ShowingBracelets40.64dbe37c.jpg",
@@ -34,7 +34,7 @@
   "entrypoints": [
     "static/js/runtime-main.6a9608a1.js",
     "static/js/2.bcd0829e.chunk.js",
-    "static/css/main.79557bc8.chunk.css",
-    "static/js/main.1d7b7cd2.chunk.js"
+    "static/css/main.19d0b4cc.chunk.css",
+    "static/js/main.e6f98afc.chunk.js"
   ]
 }
