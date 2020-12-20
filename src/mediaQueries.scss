@@ -1,0 +1,107 @@
+
+@media screen and (max-width: 970px) {
+ 
+.Homepage_section1{
+    height: 100% !important;
+
+.hero{
+    height: auto !important;
+}
+
+.hero__text-container{
+
+    height: auto !important;
+}
+
+    .hero__text{
+        margin-left: 0 !important;
+    }
+}
+
+.T-right-5{
+    right: 5rem !important;
+}
+
+
+.container-left{
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.obj_fit-cover{
+    object-fit: cover !important; 
+
+}
+
+.hide{
+  display: none !important;
+}
+
+.tab_column{
+    flex-direction: column;
+}
+
+.pos_none{
+    position: unset !important;
+}
+
+.width_50{
+    width: 50% !important;
+}
+
+.width_80{
+    width: 80% !important;
+}
+
+.d-block
+{
+    display: block !important;
+}
+
+
+.hide-large{
+  display: inline-block !important;
+}
+
+
+.btn-sm{
+    display: inline-block !important; 
+    border: 1px solid $tertiary-color;
+    padding: 1.5rem 8rem;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.width_100{
+    width: 100% !important;
+}
+
+.mr-auto{
+    margin-right: auto !important;
+}
+
+.my-5{
+    margin: 5rem 0;
+}
+
+
+.tab_mt-15{margin-top: 15rem;}
+.tab_color-black{color: $black-color !important;}
+.tab_text{width: 100% !important;}
+}
+
+
+
+@media screen and (max-width: 600px)
+{
+
+
+    .obj_fit-cover{
+        object-fit: contain !important;
+    }
+
+    .M-right-1{
+        right: 1rem !important;
+    }
+}

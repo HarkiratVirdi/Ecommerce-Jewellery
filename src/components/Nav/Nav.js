@@ -10,76 +10,77 @@ const Nav = ({ loading }) => {
   let french = useRef(null);
   let login = useRef(null);
   let cart = useRef(null);
+  let textContainer = useRef(null);
 
   const [CartDisplay, setCartDisplay] = useState(false);
 
-  useEffect(() => {
-    function showing(reference) {
-      console.log("reference", reference);
-      reference.classList.contains("hidden");
-      reference.style.color = "white";
-      reference.classList.remove("hidden");
-      reference.classList.remove("visuallyhidden");
-    }
+  // useEffect(() => {
+  //   function showing(reference) {
+  //     console.log("reference", reference);
+  //     reference.classList.contains("hidden");
+  //     reference.style.color = "white";
+  //     reference.classList.remove("hidden");
+  //     reference.classList.remove("visuallyhidden");
+  //   }
 
-    function fading(reference) {
-      console.log("reference", reference);
-      reference.style.color = "black";
-      reference.classList.add("visuallyhidden");
-      reference.addEventListener("transitionend", function (e) {
-        reference.classList.add("hidden");
-      });
-    }
+  //   function fading(reference) {
+  //     console.log("reference", reference);
+  //     reference.style.color = "black";
+  //     reference.classList.add("visuallyhidden");
+  //     reference.addEventListener("transitionend", function (e) {
+  //       reference.classList.add("hidden");
+  //     });
+  //   }
 
-    // ScrollTrigger.create({
-    //   trigger: logo,
-    //   start: "+=400",
-    //   id: "loging",
-    //   end: "+=410",
-    //   onEnter: () => {
-    //     fading(ScrollTrigger.getById("loging").vars.trigger);
-    //   },
-    //   onEnterBack: () => {
-    //     showing(ScrollTrigger.getById("loging").vars.trigger);
-    //   },
-    // });
+  //   // ScrollTrigger.create({
+  //   //   trigger: logo,
+  //   //   start: "+=400",
+  //   //   id: "loging",
+  //   //   end: "+=410",
+  //   //   onEnter: () => {
+  //   //     fading(ScrollTrigger.getById("loging").vars.trigger);
+  //   //   },
+  //   //   onEnterBack: () => {
+  //   //     showing(ScrollTrigger.getById("loging").vars.trigger);
+  //   //   },
+  //   // });
 
-    ScrollTrigger.create({
-      trigger: french,
-      start: "+=400",
-      id: "frenching",
-      end: "+=410",
-      onEnter: () => {
-        fading(ScrollTrigger.getById("frenching").vars.trigger);
-      },
-      onEnterBack: () => {
-        showing(ScrollTrigger.getById("frenching").vars.trigger);
-      },
-    });
-    ScrollTrigger.create({
-      trigger: login,
-      start: "+=400",
-      id: "logining",
-      end: "+=410",
-      onEnter: () => {
-        fading(ScrollTrigger.getById("logining").vars.trigger);
-      },
-      onEnterBack: () => {
-        showing(ScrollTrigger.getById("logining").vars.trigger);
-      },
-    });
+  //   ScrollTrigger.create({
+  //     trigger: french,
+  //     start: "+=400",
+  //     id: "frenching",
+  //     end: "+=410",
+  //     onEnter: () => {
+  //       fading(ScrollTrigger.getById("frenching").vars.trigger);
+  //     },
+  //     onEnterBack: () => {
+  //       showing(ScrollTrigger.getById("frenching").vars.trigger);
+  //     },
+  //   });
+  //   ScrollTrigger.create({
+  //     trigger: login,
+  //     start: "+=400",
+  //     id: "logining",
+  //     end: "+=410",
+  //     onEnter: () => {
+  //       fading(ScrollTrigger.getById("logining").vars.trigger);
+  //     },
+  //     onEnterBack: () => {
+  //       showing(ScrollTrigger.getById("logining").vars.trigger);
+  //     },
+  //   });
 
-    gsap.to(cart, {
-      scrollTrigger: {
-        trigger: ".body",
-        start: "+=400",
-        end: "+=500",
-        toggleActions: "restart pause reverse pause",
-        scrub: true,
-      },
-      color: "black",
-    });
-  });
+  //   gsap.to(cart, {
+  //     scrollTrigger: {
+  //       trigger: ".body",
+  //       start: "+=400",
+  //       end: "+=500",
+  //       toggleActions: "restart pause reverse pause",
+  //       scrub: true,
+  //     },
+  //     color: "black",
+  //   });
+  // });
 
   useEffect(() => {
     const transitionInitial = { opacity: 0 };
@@ -88,7 +89,7 @@ const Nav = ({ loading }) => {
       ".arrow-down",
       ".list",
       ".list-right",
-      ".heading",
+      ".hero__text-container",
       ".cta_shop",
       ".logo",
     ];
@@ -144,7 +145,7 @@ const Nav = ({ loading }) => {
     <div>
       <header>
         <nav>
-          <ul className="list">
+          <ul className="list hide">
             <li className="link">
               <Link to="/shop">Shop</Link>
             </li>
@@ -170,10 +171,10 @@ const Nav = ({ loading }) => {
           TIRA
         </Link>
 
-        <ul className="list-right">
+        <ul className="list-right T-right-5 M-right-1">
           <li className="link">
             <Link
-              className="french"
+              className="french hide"
               ref={(el) => {
                 french = el;
               }}
@@ -182,7 +183,7 @@ const Nav = ({ loading }) => {
               FR
             </Link>
           </li>
-          <li className="link">
+          <li className="link hide">
             <Link
               className="login"
               to="/login"
@@ -193,7 +194,7 @@ const Nav = ({ loading }) => {
               Login
             </Link>
           </li>
-          <li className="link">
+          <li className="link tab_color-black">
             <Link
               ref={(el) => {
                 cart = el;
